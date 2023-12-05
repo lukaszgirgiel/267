@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Example for a device which uses the ARVendorBlock, has manufacturer specific logbook entries and uses menus for arranging the parameters. -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.31.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x002A" DeviceID="0x0520">
+			<InfoText TextId="IDT_INFO_DEVICE" />
+			<VendorName Value="SIEMENS" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="SIDOOR" />
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="IDD_1" ModuleIdentNumber="0x00000001" PNIO_Version="V2.3" PhysicalSlots="0..1" MinDeviceInterval="8" ImplementationType="ERTEC200P" DNS_CompatibleName="atd430w" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion = "V2.31" MultipleWriteSupported="true" MaxSupportedRecordSize="8192" NameOfStationNotTransferable="true" DeviceAccessSupported="true" ResetToFactoryModes="2 8" CheckDeviceID_Allowed="false">
+					<ModuleInfo>
+						<Name TextId="IDT_MODULE_NAME_DEVICE" />
+						<InfoText TextId="IDT_MODULE_INFO_DEVICE" />
+						<OrderNumber Value="6FB1141-3AT10-3WE2" />
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SUBSLOT_PDEV_X1" />
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SUBSLOT_PDEV_X1_P1" />
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SUBSLOT_PDEV_X1_P2" />
+					</SubslotList>
+					<IOConfigData MaxInputLength="1440" MaxOutputLength="1440" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="IDM_1" FixedInSlots="1" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_1" SubmoduleIdentNumber="0x00000001" Writeable_IM_Records="1 2 3 4" >
+							<IOData />
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="8" >
+									<Name TextId="IDT_PARAMITEM_INT_BUS" />
+									<Const Data="0x09" ByteOffset="0" />
+									<Const Data="0x00" ByteOffset="1" />
+									<Const Data="0x00" ByteOffset="2" />
+									<Const Data="0x00" ByteOffset="3" />
+									<Const Data="0x14" ByteOffset="4" />
+									<Const Data="0x00" ByteOffset="5" />
+									<Const Data="0x00" ByteOffset="6" />
+									<Const Data="0x00" ByteOffset="7" />
+									<Ref  ValueItemTarget="IDV_INT_BUS_DATA_TRANSFER" ByteOffset="0" BitOffset="0" BitLength="1" DataType="BitArea" DefaultValue="1" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_DATA_TRANSFER" />
+									<Ref  ValueItemTarget="IDV_INT_BUS_BAUDRATE"  ByteOffset="0" BitOffset="1" DataType="BitArea" BitLength="6" DefaultValue="4" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_BAUDRATE" />
+									<Ref  ByteOffset="1" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..31" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_SLAVE_ADDR" />
+									<Ref  ValueItemTarget="IDV_INT_BUS_TELE_TYPE" ByteOffset="2" BitOffset="0" DataType="BitArea" BitLength="5" DefaultValue="0" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_TELE_TYPE"/>
+									<Ref  ByteOffset="3" DataType="Unsigned16" DefaultValue="100" AllowedValues="1..60000" Changeable="true" Visible="true" TextId="IDT_PARAMITEM_INT_BUS_CYCLE_TIME" />
+									<Ref  ByteOffset="5" DataType="Unsigned8" DefaultValue="0" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_RESERVED" />
+									<Ref  ByteOffset="6" DataType="Unsigned8" DefaultValue="0" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_RESERVED" />
+									<Ref  ByteOffset="7" DataType="Unsigned8" DefaultValue="0" Changeable="false" Visible="false" TextId="IDT_PARAMITEM_INT_BUS_RESERVED" />
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="IDT_MODULE_NAME_EMPTY" />
+								<InfoText TextId="IDT_MODULE_INFO_EMPTY" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDI_1" SubslotNumber="32768" SubmoduleIdentNumber="0x00000002" TextId="IDT_SUBMODULE_PDEV_INTERFACE" SupportedRT_Classes="RT_CLASS_1;RT_CLASS_3" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="true">
+							<RT_Class3Properties StartupMode="Legacy" MaxBridgeDelay="2088" MaxNumberIR_FrameData="1024" />
+							<SynchronisationMode MaxLocalJitter="50" T_PLL_MAX="1000" SupportedSyncProtocols="PTCP" />
+							<ApplicationRelations StartupMode="Legacy" NumberOfAR="1" >
+								<TimingProperties SendClock="8 16 32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+								<RT_Class3TimingProperties SendClock="8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128" ReductionRatioPow2="1 2 4 8 16" ReductionRatioNonPow2="1" />
+							</ApplicationRelations>
+                            			<MediaRedundancy SupportedRole="Client" />
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDP_1" SubmoduleIdentNumber="0x00000003" MAUTypes="16" SubslotNumber="32769" TextId="IDT_SUBMODULE_PDEV_PORT1" MaxPortTxDelay="6" MaxPortRxDelay="198" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" SupportsRingportConfig="false" IsDefaultRingport="true" />											
+						<PortSubmoduleItem ID="IDP_2" SubmoduleIdentNumber="0x00000003" MAUTypes="16" SubslotNumber="32770" TextId="IDT_SUBMODULE_PDEV_PORT2" MaxPortTxDelay="6" MaxPortRxDelay="198" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" SupportsRingportConfig="false" IsDefaultRingport="true" />
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="IDG_1" />
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ID="IDM_1" ModuleIdentNumber="0x00000028">
+					<ModuleInfo>
+						<Name TextId="IDT_MODULE_NAME_22_BYTE_IO" />
+						<InfoText TextId="IDT_MODULE_INFO_22_BYTE_IO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM_1" SubmoduleIdentNumber="0x00000001" >
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="22" TextId="IDT_DATAITEM_INPUT" />
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="22" TextId="IDT_DATAITEM_OUTPUT" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="IDT_MODULE_NAME_EMPTY" />
+								<InfoText TextId="IDT_MODULE_INFO_EMPTY" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<ValueList>
+				<ValueItem ID="IDV_INT_BUS_DATA_TRANSFER">
+					<Assignments>
+						<Assign Content="0" TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_DISABLED" />
+						<Assign Content="1" TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_ENABLED" />
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDV_INT_BUS_BAUDRATE">
+					<Assignments>
+						<Assign Content="0" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_9600" />
+						<Assign Content="1" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_19200" />
+						<Assign Content="2" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_38400" />
+						<Assign Content="3" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_57600" />
+						<Assign Content="4" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_115200" />
+						<Assign Content="5" TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_187500" />
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDV_INT_BUS_TELE_TYPE">
+					<Assignments>
+						<Assign Content="0" TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_0" />
+						<Assign Content="1" TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_1"  />
+						<Assign Content="2" TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_2" />
+						<Assign Content="3" TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_3" />
+						<Assign Content="4" TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_4" />
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+	        <ChannelDiagList>
+				<ChannelDiagItem ErrorType="27">
+					<Name TextId="IDT_DIAG_NAME_INT_BUS_ERROR" />
+					<ExtChannelDiagList>
+						<ExtChannelDiagItem ErrorType="1">
+							<Name TextId="IDT_DIAG_NAME_INT_BUS_ERROR_MASK" />
+							<Help TextId="IDT_DIAG_HELP_INT_BUS_ERROR_MASK" />
+							<ExtChannelAddValue> 
+								<DataItem Id="1" DataType="Unsigned32" />
+							</ExtChannelAddValue>	
+						</ExtChannelDiagItem>
+					</ExtChannelDiagList>
+				</ChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem ID="IDG_1" GraphicFile="GSDML-002A-0520-SIDOOR-ATD430W" />
+			</GraphicsList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="IDT_MODULE_NAME_EMPTY" Value="-" />
+					<Text TextId="IDT_MODULE_INFO_EMPTY" Value="-" />
+					<Text TextId="IDT_INFO_DEVICE" Value="Automatic door controller ATD430W" />
+					<Text TextId="IDT_MODULE_NAME_DEVICE" Value="ATD430W" />
+					<Text TextId="IDT_MODULE_INFO_DEVICE" Value="SIDOOR ATD430W" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1" Value="X1" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1_P1" Value="X1 P1" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1_P2" Value="X1 P2" />
+					<Text TextId="IDT_SUBMODULE_PDEV_INTERFACE" Value="PN-IO" />
+					<Text TextId="IDT_SUBMODULE_PDEV_PORT1" Value="Port 1" />
+					<Text TextId="IDT_SUBMODULE_PDEV_PORT2" Value="Port 2" />
+					<Text TextId="IDT_MODULE_NAME_22_BYTE_IO" Value="22 byte I/O" />
+					<Text TextId="IDT_MODULE_INFO_22_BYTE_IO" Value="22 byte I/O (overall consistency) - ModuleIdentNumber:0x28 - SubmoduleIdentNumber:0x1" />
+					<Text TextId="IDT_DATAITEM_INPUT" Value="22 byte I" />
+					<Text TextId="IDT_DATAITEM_OUTPUT" Value="22 byte O" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS" Value="Internal bus parameter" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_DATA_TRANSFER" Value="Data transfer" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_ENABLED" Value="Enabled" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_DISABLED" Value="Disabled" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_BAUDRATE" Value="Baud rate" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_9600" Value="9600" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_19200" Value="19200" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_38400" Value="38400" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_57600" Value="57600" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_115200" Value="115200" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_187500" Value="187500" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_SLAVE_ADDR" Value="Slave address" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_TELE_TYPE" Value="Telegram type" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_0" Value="Default telegram" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_1" Value="Mirror telegram" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_2" Value="Broadcast" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_3" Value="Special telegram" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_4" Value="Special telegram with broadcast" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_CYCLE_TIME" Value="Cycle time [ms]" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_RESERVED" Value="Reserved" />										
+					<Text TextId="IDT_DIAG_NAME_INT_BUS_ERROR" Value="Internal bus communication error" />
+					<Text TextId="IDT_DIAG_NAME_INT_BUS_ERROR_MASK" Value="Error mask: {1:x}"  />
+					<Text TextId="IDT_DIAG_HELP_INT_BUS_ERROR_MASK" Value="(0x0001) - LGE - telegram length wrong; &#10;(0x0002) - RLZ - remaining time expired; &#10;(0x0004) - BCC - block check character wrong; &#10;(0x0008) - STX - telegram start wrong; &#10;(0x0010) - ADR - telegram type unknown; &#10;(0x0020) - slave address wrong; &#10;(0x0040) - buffer overflow; &#10;(0x0080) - parity error; &#10;(0x0100) - internal error; &#10;(0x0200) - response delay time expired; &#10;(0x0400) - telegram type unequal" />
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="IDT_MODULE_NAME_EMPTY" Value="-" />
+					<Text TextId="IDT_MODULE_INFO_EMPTY" Value="-" />
+					<Text TextId="IDT_INFO_DEVICE" Value="Automatische Türsteuerung ATD430W" />
+					<Text TextId="IDT_MODULE_NAME_DEVICE" Value="ATD430W" />
+					<Text TextId="IDT_MODULE_INFO_DEVICE" Value="SIDOOR ATD430W" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1" Value="X1" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1_P1" Value="X1 P1" />
+					<Text TextId="IDT_SUBSLOT_PDEV_X1_P2" Value="X1 P2" />
+					<Text TextId="IDT_SUBMODULE_PDEV_INTERFACE" Value="PN-IO" />
+					<Text TextId="IDT_SUBMODULE_PDEV_PORT1" Value="Port 1" />
+					<Text TextId="IDT_SUBMODULE_PDEV_PORT2" Value="Port 2" />
+					<Text TextId="IDT_MODULE_NAME_22_BYTE_IO" Value="22 Byte EA" />
+					<Text TextId="IDT_MODULE_INFO_22_BYTE_IO" Value="22 Byte EA (Gesamtkonsistenz) - ModuleIdentNumber:0x28 - SubmoduleIdentNumber:0x1" />
+					<Text TextId="IDT_DATAITEM_INPUT" Value="22 Byte E" />
+					<Text TextId="IDT_DATAITEM_OUTPUT" Value="22 Byte A" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS" Value="Interne Busparameter" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_DATA_TRANSFER" Value="Datenaustausch" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_ENABLED" Value="Aktiviert" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_DATA_TRANSFER_DISABLED" Value="Deaktiviert" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_BAUDRATE" Value="Baudrate" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_9600" Value="9600" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_19200" Value="19200" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_38400" Value="38400" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_57600" Value="57600" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_115200" Value="115200" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_BAUDRATE_187500" Value="187500" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_SLAVE_ADDR" Value="Slave-Adresse" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_TELE_TYPE" Value="Telegrammtyp" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_0" Value="Standardtelegramm" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_1" Value="Spiegeltelegramm" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_2" Value="Broadcast" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_3" Value="Sondertelegramm" />
+					<Text TextId="IDT_ASSIGN_INT_BUS_TELE_TYPE_4" Value="Sondertelegramm mit Broadcast" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_CYCLE_TIME" Value="Zykluszeit [ms]" />
+					<Text TextId="IDT_PARAMITEM_INT_BUS_RESERVED" Value="Reserviert" />
+					<Text TextId="IDT_DIAG_NAME_INT_BUS_ERROR" Value="Interner Buskommunikationsfehler" />
+					<Text TextId="IDT_DIAG_NAME_INT_BUS_ERROR_MASK" Value="Fehlermaske: {1:x}" />
+					<Text TextId="IDT_DIAG_HELP_INT_BUS_ERROR_MASK" Value="(0x0001) - LGE - Telegrammlänge falsch; &#10;(0x0002) - RLZ - Restlaufzeit überschritten; &#10;(0x0004) - BCC - Blockprüfzeichen falsch; &#10;(0x0008) - STX - Telegrammstart falsch; &#10;(0x0010) - ADR - Telegrammtyp unbekannt; &#10;(0x0020) - Slave-Adresse falsch; &#10;(0x0040) - Speicherüberlauf; &#10;(0x0080) - Paritätsfehler; &#10;(0x0100) - Interner Fehler; &#10;(0x0200) - Antwortverzugszeit überschritten; &#10;(0x0400) - Telegrammtyp ungleich" />
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>
