@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2023-12-05T13:40:24.204862Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="ST1" Datatype="&quot;St timers&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Station" Datatype="Struct"><Member Name="General" Datatype="&quot;St cycle time&quot;"><Sections><Section Name="None"><Member Name="St cycle time" Datatype="Struct"><Member Name="Cycle time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="Global time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="OP time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="Pieces/hour" Datatype="Struct"><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /></Member></Member></Section></Sections></Member><Member Name="Units" Datatype="Array[1..16] of &quot;Unit cycle time&quot;"><Sections><Section Name="None"><Member Name="Unit" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /><Member Name="Used" Datatype="Bool" /></Member></Section></Sections><Subelement Path="1"><Comment><MultiLanguageText Lang="en-US">ST1OP02_CUT_NIPPLE</MultiLanguageText></Comment></Subelement><Subelement Path="2"><Comment><MultiLanguageText Lang="en-US">ST1OP03_CUT_FTPS_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="3"><Comment><MultiLanguageText Lang="en-US">ST1OP05_WELD_NIPPLE</MultiLanguageText></Comment></Subelement><Subelement Path="4"><Comment><MultiLanguageText Lang="en-US">ST1OP07_WELD_REAR_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="5"><Comment><MultiLanguageText Lang="en-US">ST1OP09_WELD_TOP_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="6"><Comment><MultiLanguageText Lang="en-US">ST1OP11_WELD_1W_CLIP</MultiLanguageText></Comment></Subelement><Subelement Path="7"><Comment><MultiLanguageText Lang="en-US">ST1OP12_WELD_HARPOON_CLIP</MultiLanguageText></Comment></Subelement><Subelement Path="8"><Comment><MultiLanguageText Lang="en-US">ST1OP13_WELD_GF_FILTER_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="9"><Comment><MultiLanguageText Lang="en-US">ST1OP14_WELD_FORT_BOYARD_CLIP</MultiLanguageText></Comment></Subelement><Subelement Path="10"><Comment><MultiLanguageText Lang="en-US">ST1OP15_WELD_RIGHT_BRACKET</MultiLanguageText></Comment></Subelement></Member></Member></Section></Sections></Member>
+    <Member Name="ST2" Datatype="&quot;St timers&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Station" Datatype="Struct"><Member Name="General" Datatype="&quot;St cycle time&quot;"><Sections><Section Name="None"><Member Name="St cycle time" Datatype="Struct"><Member Name="Cycle time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="Global time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="OP time" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /></Member><Member Name="Pieces/hour" Datatype="Struct"><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /></Member></Member></Section></Sections></Member><Member Name="Units" Datatype="Array[1..16] of &quot;Unit cycle time&quot;"><Sections><Section Name="None"><Member Name="Unit" Datatype="Struct"><Member Name="Actual" Datatype="Real" /><Member Name="History1" Datatype="Real" /><Member Name="History2" Datatype="Real" /><Member Name="History3" Datatype="Real" /><Member Name="Enable" Datatype="Bool" /><Member Name="Work_Bit1" Datatype="Bool" /><Member Name="Work_Bit2" Datatype="Bool" /><Member Name="Used" Datatype="Bool" /></Member></Section></Sections><Subelement Path="1"><Comment><MultiLanguageText Lang="en-US">ST2OP04_WELD_FILLER_PIPE</MultiLanguageText></Comment></Subelement><Subelement Path="2"><Comment><MultiLanguageText Lang="en-US">ST2OP05_INSERTION</MultiLanguageText></Comment></Subelement><Subelement Path="3"><Comment><MultiLanguageText Lang="en-US">ST2OP06_WELD_FTPS_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="4"><Comment><MultiLanguageText Lang="en-US">ST2OP08_WELD_REAR_BRACKET</MultiLanguageText></Comment></Subelement><Subelement Path="5"><Comment><MultiLanguageText Lang="en-US">ST2OP14_WELD_BOSS_1</MultiLanguageText></Comment></Subelement><Subelement Path="6"><Comment><MultiLanguageText Lang="en-US">ST2OP15_WELD_BOSS_2</MultiLanguageText></Comment></Subelement><Subelement Path="7"><Comment><MultiLanguageText Lang="en-US">ST2OP17_OILING_&amp;_FTTPS_ASSY</MultiLanguageText></Comment></Subelement><Subelement Path="8"><Comment><MultiLanguageText Lang="en-US">ST2OP18_PUNCHING</MultiLanguageText></Comment></Subelement></Member></Member></Section></Sections></Member>
+    <Member Name="ST1 life time" Datatype="&quot;St Life time&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Time" Datatype="Struct"><Member Name="AutoAct" Datatype="UDInt" /><Member Name="ManuAct" Datatype="UDInt" /><Member Name="FaultAct" Datatype="UDInt" /><Member Name="Current" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History1" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History2" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History3" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="Pulse" Datatype="Struct"><Member Name="Auto" Datatype="Bool" /><Member Name="Manu" Datatype="Bool" /><Member Name="Fault" Datatype="Bool" /><Member Name="Good" Datatype="Bool" /><Member Name="Bad" Datatype="Bool" /><Member Name="Rewrite" Datatype="Bool" /></Member><Member Name="Rewrite" Datatype="Bool" /></Member></Section></Sections></Member>
+    <Member Name="ST2 life time" Datatype="&quot;St Life time&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Time" Datatype="Struct"><Member Name="AutoAct" Datatype="UDInt" /><Member Name="ManuAct" Datatype="UDInt" /><Member Name="FaultAct" Datatype="UDInt" /><Member Name="Current" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History1" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History2" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="History3" Datatype="Struct"><Member Name="Auto" Datatype="String[30]" /><Member Name="Manu" Datatype="String[30]" /><Member Name="Fault" Datatype="String[30]" /><Member Name="Good" Datatype="UDInt" /><Member Name="Bad" Datatype="UDInt" /></Member><Member Name="Pulse" Datatype="Struct"><Member Name="Auto" Datatype="Bool" /><Member Name="Manu" Datatype="Bool" /><Member Name="Fault" Datatype="Bool" /><Member Name="Good" Datatype="Bool" /><Member Name="Bad" Datatype="Bool" /><Member Name="Rewrite" Datatype="Bool" /></Member><Member Name="Rewrite" Datatype="Bool" /></Member></Section></Sections></Member>
+    <Member Name="Machine life time" Datatype="&quot;Machine Life time&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Machine Life" Datatype="Struct"><Member Name="Machine Life Counter" Datatype="UDInt" /><Member Name="Machine Life time" Datatype="String[30]" /><Member Name="Pulse" Datatype="Bool" /></Member></Section></Sections></Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>DB412 Cycle timers</Name>
+      <Number>412</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>pl-PL</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-GB</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>pl-PL</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-GB</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
